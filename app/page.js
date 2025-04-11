@@ -35,7 +35,7 @@ import {
 } from "react-icons/si";
 
 import { VscAzure, VscAzureDevops } from "react-icons/vsc";
-import { projectsData } from "../lib/projectsData"; // Import project data
+import { projectsData } from "@/lib/projectsData"; // Import project data using alias
 // import { ScrambleHover } from "../components/ScrambleHover"; // Removed import
 // Note: Some icons might not be perfect matches (e.g., NoSQL, Azure Logic Apps, CI/CD)
 
