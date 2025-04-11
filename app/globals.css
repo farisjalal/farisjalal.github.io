@@ -514,30 +514,46 @@ footer a:hover {
   }
 
   /* Mobile Nav Styles */
+  nav.main-nav {
+    padding-left: 0; /* Remove padding on mobile */
+    padding-right: 0;
+  }
   .nav-container {
-    position: relative; /* Needed for absolute positioning of mobile menu */
+    position: relative;
+    max-width: none;
+    margin: 0;
+    padding: 0 15px; /* Add padding back to container */
   }
 
   .hamburger-button {
-    display: block; /* Show hamburger on mobile */
-    z-index: 110; /* Ensure it's above the menu */
+    display: block;
+    z-index: 110;
   }
 
   .nav-links {
-    display: none; /* Hide desktop links by default */
+    /* display: none; /* Replaced by max-height/opacity/visibility */
     position: absolute;
-    top: 100%; /* Position below nav bar */
+    top: 100%;
     left: 0;
     right: 0;
     background-color: var(--nav-background-color);
     border-bottom: 1px solid var(--border-color);
-    padding: 10px 0; /* Add some padding */
+    /* padding: 10px 0; /* Padding handled by ul/li */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 105;
+    /* Animation properties */
+    max-height: 0; /* Initially hidden */
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden; /* Prevent content spill during transition */
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
   }
 
   .nav-links.open {
-    display: block; /* Show menu when open */
+    /* display: block; /* Replaced by max-height/opacity/visibility */
+    max-height: 500px; /* Or enough height to show all items */
+    opacity: 1;
+    visibility: visible;
   }
 
   .nav-links ul {
@@ -559,9 +575,9 @@ footer a:hover {
     box-sizing: border-box;
     border-bottom: 1px solid var(--border-color);
   }
-   .nav-links li:last-child a {
-     border-bottom: none; /* Remove border from last item */
-   }
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
 
   /* Adjust project grid for small screens */
   .projects-grid {
