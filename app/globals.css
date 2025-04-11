@@ -95,21 +95,28 @@ header.main-header {
 }
 
 /* Section and Footer Base Styles */
-section,
-footer {
+section { /* Apply only to section */
   padding: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   transition: border-color 0.3s ease;
+  scroll-margin-top: 80px; /* Add offset for sticky nav */
 }
 
-footer {
+footer { /* Keep footer separate */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+  /* Footer specific styles from below */
   text-align: center;
   border-top: 1px solid var(--border-color);
   border-bottom: none;
   padding-top: 20px;
   margin-top: 40px;
 }
+
+/* Footer styles moved up */
 
 /* Typography */
 h1 {
@@ -153,7 +160,7 @@ p {
 /* Navigation Styles */
 nav.main-nav {
   background-color: var(--nav-background-color);
-  padding: 10px 20px;
+  padding: 10px 0; /* Use container padding */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -167,6 +174,7 @@ nav.main-nav {
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; /* Container controls padding */
 }
 
 .nav-brand a {
@@ -515,14 +523,15 @@ footer a:hover {
 
   /* Mobile Nav Styles */
   nav.main-nav {
-    padding-left: 0; /* Remove padding on mobile */
+    padding-left: 0;
     padding-right: 0;
   }
   .nav-container {
-    position: relative;
+    position: relative; /* Restore relative positioning */
     max-width: none;
     margin: 0;
-    padding: 0 15px; /* Add padding back to container */
+    padding: 0 15px;
+    /* flex-wrap: wrap; /* Remove wrap */
   }
 
   .hamburger-button {
@@ -531,46 +540,52 @@ footer a:hover {
   }
 
   .nav-links {
-    /* display: none; /* Replaced by max-height/opacity/visibility */
-    position: absolute;
-    top: 100%;
+    position: absolute; /* Restore absolute positioning */
+    top: 100%; /* Position below nav bar */
     left: 0;
     right: 0;
     background-color: var(--nav-background-color);
     border-bottom: 1px solid var(--border-color);
-    /* padding: 10px 0; /* Padding handled by ul/li */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 105;
+    /* width: 100%; /* Not needed with left/right 0 */
+    /* order: 3; /* Not needed when absolute */
     /* Animation properties */
-    max-height: 0; /* Initially hidden */
+    max-height: 0;
     opacity: 0;
     visibility: hidden;
-    overflow: hidden; /* Prevent content spill during transition */
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out; /* Removed padding/margin transition */
+    /* margin-top: 0; /* Not needed */
+    /* padding: 0; /* Padding handled by open state */
   }
 
   .nav-links.open {
-    /* display: block; /* Replaced by max-height/opacity/visibility */
-    max-height: 500px; /* Or enough height to show all items */
+    max-height: 300px; /* Reduced max-height */
     opacity: 1;
     visibility: visible;
+    padding-top: 10px; /* Only top padding */
+    padding-bottom: 0; /* Explicitly remove bottom padding */
+    /* margin-top: 10px; */
+    /* border-top: 1px solid var(--border-color); */
   }
 
+
   .nav-links ul {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
   .nav-links li {
-    margin: 0; /* Remove horizontal margin */
+    margin: 0;
     width: 100%;
     text-align: center;
   }
 
   .nav-links a {
-    display: block; /* Make links take full width */
-    padding: 12px 20px; /* Increase padding for easier tapping */
+    display: block;
+    padding: 12px 20px;
     width: 100%;
     box-sizing: border-box;
     border-bottom: 1px solid var(--border-color);
@@ -590,12 +605,5 @@ footer a:hover {
 
   .skills-category-grid {
     grid-template-columns: 1fr;
-  }
-
-  nav ul { /* This seems redundant with .nav-links ul */
-    justify-content: space-around;
-  }
-  nav li { /* This seems redundant with .nav-links li */
-    margin: 5px 5px;
   }
 }
