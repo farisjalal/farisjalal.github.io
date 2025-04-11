@@ -95,28 +95,21 @@ header.main-header {
 }
 
 /* Section and Footer Base Styles */
-section { /* Apply only to section */
+section,
+footer {
   padding: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   transition: border-color 0.3s ease;
-  scroll-margin-top: 80px; /* Add offset for sticky nav */
 }
 
-footer { /* Keep footer separate */
-  padding: 20px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--border-color);
-  transition: border-color 0.3s ease;
-  /* Footer specific styles from below */
+footer {
   text-align: center;
   border-top: 1px solid var(--border-color);
   border-bottom: none;
   padding-top: 20px;
   margin-top: 40px;
 }
-
-/* Footer styles moved up */
 
 /* Typography */
 h1 {
@@ -536,7 +529,7 @@ footer a:hover {
 
   .hamburger-button {
     display: block;
-    z-index: 110;
+    z-index: 110; /* Restore z-index */
   }
 
   .nav-links {
@@ -545,7 +538,7 @@ footer a:hover {
     left: 0;
     right: 0;
     background-color: var(--nav-background-color);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color); /* Keep border for bottom line */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 105;
     /* width: 100%; /* Not needed with left/right 0 */

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState, useRef, useEffect, useCallback } from "react"; // Added useCallback
+// Removed useState, useEffect, useCallback as they are now in Navbar
 import {
   FaPython,
   FaJava,
@@ -16,10 +16,7 @@ import {
   FaDatabase,
   FaGitAlt, // Added Git
   FaJsSquare, // Added JS
-  FaSun, // Added Sun icon
-  FaMoon, // Added Moon icon
-  FaBars, // Added Bars icon
-  FaTimes, // Added Times icon
+  // Removed FaSun, FaMoon, FaBars, FaTimes as they are in Navbar
 } from "react-icons/fa";
 
 import {
@@ -38,6 +35,7 @@ import {
 } from "react-icons/si";
 
 import { VscAzure, VscAzureDevops } from "react-icons/vsc";
+import { projectsData } from "../lib/projectsData"; // Import project data
 // import { ScrambleHover } from "../components/ScrambleHover"; // Removed import
 // Note: Some icons might not be perfect matches (e.g., NoSQL, Azure Logic Apps, CI/CD)
 
@@ -45,143 +43,20 @@ export default function Home() {
   // Removed carousel state and ref
   // const [currentItem, setCurrentItem] = useState(0);
   // const carouselRef = useRef(null);
-  const [theme, setTheme] = useState("dark"); // Default to dark theme initially
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // Removed theme and isMobileMenuOpen state, now handled in Navbar
 
-  const projects = [
-    {
-      title: "USB Rubber Ducky",
-      description:
-        "Custom human interface device to execute automated payload scripts to disable antivirus software, turn off firewalls, and deploy keyloggers",
-      image: "/images/projects/1/1.jpg",
-      link: "#",
-      tags: ["Security", "Arduino"],
-      year: "2022",
-    },
-    {
-      title: "Stock Data Analyser",
-      description:
-        "Microservices-based stock analysis platform using AWS Lambda, API Gateway, and S3, enabling real-time stock data retrieval and visualization",
-      image: "/images/projects/2/1.jpg",
-      link: "#",
-      tags: ["Microservices", "AWS", "S3", "APIs", "Python"],
-      year: "2023",
-    },
-    {
-      title: "PlusOne",
-      description:
-        "One-stop event planning/booking cross-platform mobile app using Flutter, Firebase (NoSQL), and a multithreaded Flask (Python) server",
-      image: "/images/projects/3/1.jpg",
-      link: "#",
-      tags: ["Flutter", "Prototyping", "Firebase", "System Design"],
-      year: "2022",
-    },
-    {
-      title: "Soccer Droids",
-      description:
-        "Autonomous soccer-playing robot, Arduino-based control system for real-time decision-making, Utilising a Pixy2 Camera for object detection and tracking",
-      image: "/images/projects/4/1.jpg",
-      link: "#",
-      tags: ["Arduino", "Robotics", "Pixy2", "Engineering"],
-      year: "2019",
-    },
-  ];
+  // Project data is now imported from lib/projectsData.js
+  const projects = projectsData; // Assign imported data to the variable used by the component
 
   // Removed carousel handlers and scroll effect
 
-  // Effect to load theme from localStorage and apply initial class
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "dark"; // Default to dark if nothing saved
-    setTheme(savedTheme);
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
-  }, []);
-
-  // Function to toggle theme
-  const toggleTheme = useCallback(() => {
-    setTheme((prevTheme) => {
-      const newTheme = prevTheme === "light" ? "dark" : "light";
-      localStorage.setItem("theme", newTheme);
-      document.documentElement.classList.toggle("dark", newTheme === "dark");
-      return newTheme;
-    });
-  }, []);
+  // Removed theme useEffect and toggleTheme function, now handled in Navbar
 
   // Add theme class to the main div
+  // Removed theme class from div, Navbar component handles theme now
   return (
-    <div className={theme}>
-      <nav className='main-nav'>
-        <div className='nav-container'>
-          {/* Always visible: Name */}
-          <div className='nav-brand'>
-            <a href='#'>Faris Jalal</a>
-          </div>
-
-          {/* Links container (hidden on mobile, shown in menu) */}
-          <div className={`nav-links ${isMobileMenuOpen ? "open" : ""}`}>
-            <ul>
-              <li>
-                <a href='#about' onClick={() => setIsMobileMenuOpen(false)}>
-                  About
-                </a>
-              </li>
-              <li>
-                <a
-                  href='#technical-skills'
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Skills
-                </a>
-              </li>
-              <li>
-                <a href='#interests' onClick={() => setIsMobileMenuOpen(false)}>
-                  Interests
-                </a>
-              </li>
-              <li>
-                <a href='#projects' onClick={() => setIsMobileMenuOpen(false)}>
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href='#contact' onClick={() => setIsMobileMenuOpen(false)}>
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a
-                  href='/resume.pdf'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Always visible: Theme Toggle and Hamburger */}
-          <div className='nav-controls'>
-            {/* Theme Toggle Button */}
-            <button
-              onClick={toggleTheme}
-              className='theme-toggle-button'
-              aria-label='Toggle theme'
-            >
-              {theme === "light" ? <FaMoon /> : <FaSun />}
-            </button>
-
-            {/* Hamburger Button (Mobile Only) */}
-            <button
-              className='hamburger-button'
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label='Toggle menu'
-            >
-              {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-            </button>
-          </div>
-        </div>
-      </nav>
+    <div>
+      {/* Navbar is now handled by layout.js */}
       <header className='main-header'>
         {/* Image */}
         <img
@@ -432,7 +307,8 @@ export default function Home() {
               <p>{project.description}</p>
               <div className='project-footer'>
                 <span>{project.year}</span>
-                <a href={project.link}>View Project</a>
+                <a href={project.link}>View Project</a>{" "}
+                {/* Link now points to /projects/[slug] */}
               </div>
             </div>
           ))}
