@@ -7,6 +7,13 @@ const nextConfig = {
     unoptimized: true, // Disable Next.js image optimization for static export
   },
   // No basePath or assetPrefix needed for root deployment
+  webpack: (config, { isServer }) => {
+    config.resolve.modules = [
+      ...(config.resolve.modules || []),
+      "./", // Add the project root directory
+    ];
+    return config;
+  },
 };
 
 export default nextConfig;
