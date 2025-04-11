@@ -2,51 +2,54 @@
 
 /* Define CSS Variables */
 /* Refined Light Mode Palette */
+/* Autumn Forest Light Mode Palette */
+/* Autumn Forest Light Mode Palette */
 :root {
-  --background-color: #FFFFFF;       /* White */
-  --text-color: #111827;             /* gray-900 */
-  --text-muted-color: #6B7280;       /* gray-500 */
-  --secondary-accent-color: #3B82F6; /* blue-500 */
-  --border-color: #E5E7EB;             /* gray-200 */
+  --background-color: #FAF0E6;       /* Linen */
+  --text-color: #4E443A;             /* Dark Brown */
+  --text-muted-color: #8B7D6B;       /* Lighter Brown */
+  --secondary-accent-color: #D97706; /* Amber/Orange */
+  --border-color: #D2B48C;             /* Tan */
   --card-background-color: #FFFFFF;    /* White */
-  --nav-background-color: #FFFFFF;     /* White */
-  --button-background-color: #111827; /* gray-900 */
+  --nav-background-color: #FAF0E6;     /* Linen */
+  --button-background-color: #8B4513; /* Saddle Brown */
   --button-text-color: #FFFFFF;       /* White */
-  --button-hover-background-color: #374151; /* gray-700 */
-  --tag-background-color: #F3F4F6;    /* gray-100 */
-  --tag-text-color: #4B5563;          /* gray-600 */
-  --separator-color: #D1D5DB;         /* gray-300 */
-  --image-border-color: #E5E7EB;      /* gray-200 */
-  --skill-item-hover-bg: #F3F4F6;     /* gray-100 */
-  --skill-icon-color: #6B7280;        /* gray-500 */
-  --skill-icon-hover-color: #3B82F6;  /* blue-500 */
-  --skill-name-color: #6B7280;        /* gray-500 */
-  --skill-name-only-color: #9CA3AF;   /* gray-400 */
-  --skill-name-only-hover-color: #6B7280; /* gray-500 */
+  --button-hover-background-color: #A0522D; /* Sienna */
+  --tag-background-color: #DEB887;    /* Burly Wood */
+  --tag-text-color: #8B4513;          /* Saddle Brown */
+  --separator-color: #CD853F;         /* Peru */
+  --image-border-color: #D2B48C;      /* Tan */
+  --skill-item-hover-bg: #F5F5DC;     /* Beige */
+  --skill-icon-color: #8B7D6B;        /* Lighter Brown */
+  --skill-icon-hover-color: #D97706;  /* Amber/Orange */
+  --skill-name-color: #8B7D6B;        /* Lighter Brown */
+  --skill-name-only-color: #A0522D;   /* Sienna */
+  --skill-name-only-hover-color: #8B4513; /* Saddle Brown */
 }
 
 /* Refined Dark Mode Palette */
+/* Autumn Forest Dark Mode Palette */
 html.dark {
-  --background-color: #030712;       /* gray-950 */
-  --text-color: #F9FAFB;             /* gray-50 */
-  --text-muted-color: #9CA3AF;       /* gray-400 */
-  --secondary-accent-color: #60A5FA; /* blue-400 */
-  --border-color: #374151;             /* gray-700 */
-  --card-background-color: #111827;    /* gray-900 */
-  --nav-background-color: #111827;     /* gray-900 */
-  --button-background-color: #F9FAFB; /* gray-50 */
-  --button-text-color: #111827;       /* gray-900 */
-  --button-hover-background-color: #E5E7EB; /* gray-200 */
-  --tag-background-color: #374151;    /* gray-700 */
-  --tag-text-color: #D1D5DB;          /* gray-300 */
-  --separator-color: #4B5563;         /* gray-600 */
-  --image-border-color: #374151;      /* gray-700 */
-  --skill-item-hover-bg: #1F2937;     /* gray-800 */
-  --skill-icon-color: #9CA3AF;        /* gray-400 */
-  --skill-icon-hover-color: #60A5FA;  /* blue-400 */
-  --skill-name-color: #9CA3AF;        /* gray-400 */
-  --skill-name-only-color: #6B7280;   /* gray-500 */
-  --skill-name-only-hover-color: #9CA3AF; /* gray-400 */
+  --background-color: #2F4F2F;       /* Dark Slate Green */
+  --text-color: #F5F5DC;             /* Beige */
+  --text-muted-color: #BDB76B;       /* Dark Khaki */
+  --secondary-accent-color: #FFA500; /* Orange */
+  --border-color: #556B2F;             /* Dark Olive Green */
+  --card-background-color: #223A22;    /* Darker Green */
+  --nav-background-color: #223A22;     /* Darker Green */
+  --button-background-color: #DEB887; /* Burly Wood */
+  --button-text-color: #2F4F2F;       /* Dark Slate Green */
+  --button-hover-background-color: #CD853F; /* Peru */
+  --tag-background-color: #556B2F;    /* Dark Olive Green */
+  --tag-text-color: #F5F5DC;          /* Beige */
+  --separator-color: #8FBC8F;         /* Dark Sea Green */
+  --image-border-color: #556B2F;      /* Dark Olive Green */
+  --skill-item-hover-bg: #223A22;     /* Darker Green */
+  --skill-icon-color: #BDB76B;        /* Dark Khaki */
+  --skill-icon-hover-color: #FFA500;  /* Orange */
+  --skill-name-color: #BDB76B;        /* Dark Khaki */
+  --skill-name-only-color: #8FBC8F;   /* Dark Sea Green */
+  --skill-name-only-hover-color: #BDB76B; /* Dark Khaki */
 }
 
 

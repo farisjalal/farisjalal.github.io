@@ -398,15 +398,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id='interests'>
-        <h2>Interests</h2>
-        {/* Using interests from the resume */}
-        <ul>
-          <li>Speedcubing</li>
-          <li>Retro Game Emulation</li>
-          <li>Hobbyist Prototyping on Microcontrollers</li>
-        </ul>
-      </section>
+      {/* Interests section will be moved below Projects */}
 
       <section id='projects'>
         <h2>Projects</h2>
@@ -439,6 +431,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Interests section moved here */}
+      <section id='interests'>
+        <h2>Interests</h2>
+        {/* Using interests from the resume */}
+        <ul>
+          <li>Speedcubing</li>
+          <li>Retro Game Emulation</li>
+          <li>Hobbyist Prototyping on Microcontrollers</li>
+        </ul>
+      </section>
       {/* Removed Blog section */}
 
       <section id='contact'>
