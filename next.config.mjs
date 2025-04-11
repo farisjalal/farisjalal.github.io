@@ -13,7 +13,9 @@ const nextConfig = {
       "./", // Add the project root directory
     ];
     return config;
+    return config;
   },
+  distDir: "out",
 };
 
 export default nextConfig;
