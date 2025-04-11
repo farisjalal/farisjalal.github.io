@@ -448,7 +448,6 @@ export default function Home() {
           Email:{" "}
           <a href='mailto:jalal.faris@gmail.com'>jalal.faris@gmail.com</a>
         </p>
-        <p>Phone: 0422 970 323</p>
         {/* Updated with social links */}
         <p>
           LinkedIn:{" "}
