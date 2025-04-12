@@ -1,0 +1,85 @@
+/* Navigation Styles */
+nav.main-nav {
+  background-color: var(--nav-background-color);
+  padding: 10px 0; /* Use container padding */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Container controls padding */
+}
+
+.nav-brand a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: var(--text-muted-color);
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--text-color);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  color: var(--text-muted-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  color: var(--secondary-accent-color);
+}
+
+.hamburger-button {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  color: var(--text-muted-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 5px;
+}

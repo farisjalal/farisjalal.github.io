@@ -1,0 +1,96 @@
+/* Define CSS Variables */
+/* Refined Light Mode Palette */
+:root {
+  --background-color: #FFFFFF;       /* White */
+  --text-color: #111827;             /* gray-900 */
+  --text-muted-color: #6B7280;       /* gray-500 */
+  --secondary-accent-color: #3B82F6; /* blue-500 */
+  --border-color: #B0B0B0;             /* Darker Gray */
+  --card-background-color: #FFFFFF;    /* White */
+  --nav-background-color: #FFFFFF;     /* White */
+  --button-background-color: #111827; /* gray-900 */
+  --button-text-color: #FFFFFF;       /* White */
+  --button-hover-background-color: #374151; /* gray-700 */
+  --tag-background-color: #F3F4F6;    /* gray-100 */
+  --tag-text-color: #4B5563;          /* gray-600 */
+  --separator-color: #A0A0A0;         /* Darker Gray */
+  --image-border-color: #E5E7EB;      /* gray-200 */
+  --skill-item-hover-bg: #F3F4F6;     /* gray-100 */
+  --skill-icon-color: #6B7280;        /* gray-500 */
+  --skill-icon-hover-color: #3B82F6;  /* blue-500 */
+  --skill-name-color: #6B7280;        /* gray-500 */
+  --skill-name-only-color: #9CA3AF;   /* gray-400 */
+  --skill-name-only-hover-color: #000000; /* Black */
+
+  /* Skill Category Colors - Light Mode */
+  --programming-scripting-color: #2563EB; /* blue-600 */
+  --web-mobile-development-color: #16A34A; /* green-600 */
+  --cloud-devops-color: #C026D3; /* purple-600 */
+  --databases-color: #D97706; /* amber-600 */
+  --embedded-iot-color: #DC2626; /* red-600 */
+  --other-color: #0E7490; /* cyan-600 */
+
+  --programming-scripting-icon-color: #60A5FA; /* blue-400 */
+  --web-mobile-development-icon-color: #6EEB8B; /* green-400 */
+  --cloud-devops-icon-color: #E879F9; /* purple-400 */
+  --databases-icon-color: #FCD34D; /* amber-300 */
+  --embedded-iot-icon-color: #F87171; /* red-400 */
+  --other-icon-color: #22D3EE; /* cyan-400 */
+
+  /* Skill Category Hover Colors - Light Mode */
+  --programming-scripting-hover-color: #60A5FA; /* blue-400 */
+  --web-mobile-development-hover-color: #6EEB8B; /* green-400 */
+  --cloud-devops-hover-color: #E879F9; /* purple-400 */
+  --databases-hover-color: #FCD34D; /* amber-300 */
+  --embedded-iot-hover-color: #F87171; /* red-400 */
+  --other-hover-color: #22D3EE; /* cyan-400 */
+}
+
+/* Refined Dark Mode Palette */
+html.dark {
+  --background-color: #030712;       /* gray-950 */
+  --text-color: #F9FAFB;             /* gray-50 */
+  --text-muted-color: #9CA3AF;       /* gray-400 */
+  --secondary-accent-color: #60A5FA; /* blue-400 */
+  --border-color: #374151;             /* gray-700 */
+  --card-background-color: #111827;    /* gray-900 */
+  --nav-background-color: #111827;     /* gray-900 */
+  --button-background-color: #374151; /* gray-700 */
+  --button-text-color: #F9FAFB;       /* gray-50 */
+  --button-hover-background-color: #E5E7EB; /* gray-200 */
+  --tag-background-color: #374151;    /* gray-700 */
+  --tag-text-color: #D1D5DB;          /* gray-300 */
+  --separator-color: #4B5563;         /* gray-600 */
+  --image-border-color: #374151;      /* gray-700 */
+  --skill-item-hover-bg: #1F2937;     /* gray-800 */
+  --skill-icon-color: #9CA3AF;        /* gray-400 */
+  --skill-icon-hover-color: #60A5FA;  /* blue-400 */
+  --skill-name-color: #9CA3AF;        /* gray-400 */
+  --skill-name-only-color: #6B7280;   /* gray-500 */
+  --skill-name-only-hover-color: #000000; /* Black */
+
+  /* Skill Category Colors - Dark Mode */
+  html.dark & {
+    --programming-scripting-color: #90CAF9; /* blue-300 */
+    --web-mobile-development-color: #6EEB8B; /* green-400 */
+    --cloud-devops-color: #E879F9; /* purple-400 */
+    --databases-color: #FCD34D; /* amber-300 */
+    --embedded-iot-color: #F87171; /* red-400 */
+    --other-color: #22D3EE; /* cyan-400 */
+
+    --programming-scripting-icon-color: #2563EB; /* blue-600 */
+    --web-mobile-development-icon-color: #16A34A; /* green-600 */
+    --cloud-devops-icon-color: #C026D3; /* purple-600 */
+    --databases-icon-color: #D97706; /* amber-600 */
+    --embedded-iot-icon-color: #DC2626; /* red-600 */
+    --other-icon-color: #0E7490; /* cyan-600 */
+
+    /* Skill Category Hover Colors - Dark Mode */
+    --programming-scripting-hover-color: #2563EB; /* blue-600 */
+    --web-mobile-development-hover-color: #16A34A; /* green-600 */
+    --cloud-devops-hover-color: #C026D3; /* purple-600 */
+    --databases-hover-color: #D97706; /* amber-600 */
+    --embedded-iot-hover-color: #DC2626; /* red-600 */
+    --other-hover-color: #0E7490; /* cyan-600 */
+  }
+}

@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'SF Mono', Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styles */
+header.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding: 50px 20px;
+  border-bottom: none;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-text {
+  max-width: 600px;
+}
+
+.header-image {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 3px solid var(--image-border-color);
+  flex-shrink: 0;
+  transition: border-color 0.3s ease;
+}
+
+.header-separator {
+  width: 1px;
+  background-color: var(--separator-color);
+  align-self: stretch;
+  margin: 0 30px;
+  transition: background-color 0.3s ease;
+}
+
+/* Section and Footer Base Styles */
+section { /* Apply only to section */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+  scroll-margin-top: 80px; /* Add offset for sticky nav */
+}
+
+footer { /* Keep footer separate */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+  /* Footer specific styles from below */
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: none;
+  padding-top: 20px;
+  margin-top: 40px;
+}
+
+/* Footer styles moved up */
