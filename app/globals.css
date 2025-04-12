@@ -7,7 +7,7 @@
   --text-color: #111827;             /* gray-900 */
   --text-muted-color: #6B7280;       /* gray-500 */
   --secondary-accent-color: #3B82F6; /* blue-500 */
-  --border-color: #E5E7EB;             /* gray-200 */
+  --border-color: #B0B0B0;             /* Darker Gray */
   --card-background-color: #FFFFFF;    /* White */
   --nav-background-color: #FFFFFF;     /* White */
   --button-background-color: #111827; /* gray-900 */
@@ -15,14 +15,14 @@
   --button-hover-background-color: #374151; /* gray-700 */
   --tag-background-color: #F3F4F6;    /* gray-100 */
   --tag-text-color: #4B5563;          /* gray-600 */
-  --separator-color: #D1D5DB;         /* gray-300 */
+  --separator-color: #A0A0A0;         /* Darker Gray */
   --image-border-color: #E5E7EB;      /* gray-200 */
   --skill-item-hover-bg: #F3F4F6;     /* gray-100 */
   --skill-icon-color: #6B7280;        /* gray-500 */
   --skill-icon-hover-color: #3B82F6;  /* blue-500 */
   --skill-name-color: #6B7280;        /* gray-500 */
   --skill-name-only-color: #9CA3AF;   /* gray-400 */
-  --skill-name-only-hover-color: #6B7280; /* gray-500 */
+  --skill-name-only-hover-color: #000000; /* Black */
 
   /* Skill Category Colors - Light Mode */
   --programming-scripting-color: #2563EB; /* blue-600 */
@@ -69,7 +69,7 @@ html.dark {
   --skill-icon-hover-color: #60A5FA;  /* blue-400 */
   --skill-name-color: #9CA3AF;        /* gray-400 */
   --skill-name-only-color: #6B7280;   /* gray-500 */
-  --skill-name-only-hover-color: #9CA3AF; /* gray-400 */
+  --skill-name-only-hover-color: #000000; /* Black */
 
   /* Skill Category Colors - Dark Mode */
   html.dark & {
