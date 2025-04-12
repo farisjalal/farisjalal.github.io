@@ -93,10 +93,7 @@ export default function Home() {
             <h3 style={{ color: "var(--programming-scripting-color)" }}>
               Programming/Scripting
             </h3>
-            <div
-              className='skills-icons'
-              style={{ color: "var(--programming-scripting-icon-color)" }}
-            >
+            <div className='skills-icons'>
               {/* Python */}
               <div className='skill-item' title='Python'>
                 <FaPython
@@ -216,10 +213,7 @@ export default function Home() {
             <h3 style={{ color: "var(--cloud-devops-color)" }}>
               Cloud & DevOps
             </h3>
-            <div
-              className='skills-icons'
-              style={{ color: "var(--cloud-devops-icon-color)" }}
-            >
+            <div className='skills-icons'>
               {/* Azure Logic Apps */}
               <div className='skill-item' title='Azure Logic Apps'>
                 <VscAzure
@@ -266,10 +260,7 @@ export default function Home() {
           {/* Databases */}
           <div className='skills-category'>
             <h3 style={{ color: "var(--databases-color)" }}>Databases</h3>
-            <div
-              className='skills-icons'
-              style={{ color: "var(--databases-icon-color)" }}
-            >
+            <div className='skills-icons'>
               {/* PostgreSQL */}
               <div className='skill-item' title='PostgreSQL'>
                 <SiPostgresql
@@ -302,7 +293,7 @@ export default function Home() {
                   style={{ color: "var(--databases-icon-color)" }}
                 />{" "}
                 {/* Using generic */}
-                <span className='skill-name'>NoSQL</span>
+                <span className='skill-name'>SQL</span>
               </div>
               {/* Firestore */}
               <div className='skill-item' title='Firestore'>
@@ -320,10 +311,7 @@ export default function Home() {
             <h3 style={{ color: "var(--embedded-iot-color)" }}>
               Embedded Systems / IoT
             </h3>
-            <div
-              className='skills-icons'
-              style={{ color: "var(--embedded-iot-icon-color)" }}
-            >
+            <div className='skills-icons'>
               {/* Raspberry Pi */}
               <div className='skill-item' title='Raspberry Pi'>
                 <FaRaspberryPi
@@ -345,10 +333,7 @@ export default function Home() {
           {/* Other */}
           <div className='skills-category'>
             <h3 style={{ color: "var(--other-color)" }}>Other</h3>
-            <div
-              className='skills-icons'
-              style={{ color: "var(--other-icon-color)" }}
-            >
+            <div className='skills-icons'>
               {/* Networking */}
               <div className='skill-item' title='Networking'>
                 <FaNetworkWired
@@ -410,8 +395,8 @@ export default function Home() {
               />
               <h3>{project.title}</h3>
               <div className='tags'>
-                {project.tags &&
-                  project.tags.map((tag, tagIndex) => (
+                {projects.tags &&
+                  projects.tags.map((tag, tagIndex) => (
                     <span className='tag' key={tagIndex}>
                       {tag}
                     </span>

@@ -38,6 +38,14 @@
   --databases-icon-color: #FCD34D; /* amber-300 */
   --embedded-iot-icon-color: #F87171; /* red-400 */
   --other-icon-color: #22D3EE; /* cyan-400 */
+
+  /* Skill Category Hover Colors - Light Mode */
+  --programming-scripting-hover-color: #60A5FA; /* blue-400 */
+  --web-mobile-development-hover-color: #6EEB8B; /* green-400 */
+  --cloud-devops-hover-color: #E879F9; /* purple-400 */
+  --databases-hover-color: #FCD34D; /* amber-300 */
+  --embedded-iot-hover-color: #F87171; /* red-400 */
+  --other-hover-color: #22D3EE; /* cyan-400 */
 }
 
 /* Refined Dark Mode Palette */
@@ -78,6 +86,14 @@ html.dark {
     --databases-icon-color: #D97706; /* amber-600 */
     --embedded-iot-icon-color: #DC2626; /* red-600 */
     --other-icon-color: #0E7490; /* cyan-600 */
+
+    /* Skill Category Hover Colors - Dark Mode */
+    --programming-scripting-hover-color: #2563EB; /* blue-600 */
+    --web-mobile-development-hover-color: #16A34A; /* green-600 */
+    --cloud-devops-hover-color: #C026D3; /* purple-600 */
+    --databases-hover-color: #D97706; /* amber-600 */
+    --embedded-iot-hover-color: #DC2626; /* red-600 */
+    --other-hover-color: #0E7490; /* cyan-600 */
   }
 }
 
@@ -427,6 +443,7 @@ nav.main-nav {
   padding: 2px;
   position: absolute;
   opacity: 0;
+  color: inherit; /* Inherit color from parent */
   transition: opacity 0.2s ease, color 0.3s ease;
   white-space: normal;
   line-height: 1.1;
@@ -442,16 +459,18 @@ nav.main-nav {
 }
 
 .skill-item:hover .skill-icon {
+  color: inherit; /* Inherit color from parent */
   opacity: 0;
 }
 
 .skill-item:hover .skill-name {
   opacity: 1;
+  color: #000000; /* Black */
 }
 
 .skill-item:hover .skill-name-only {
    opacity: 1;
-   color: var(--skill-name-only-hover-color);
+   color: var(--skill-category-hover-color);
 }
 
 
@@ -535,105 +554,31 @@ footer a:hover {
     margin: 0 auto;
     width: 140px;
     height: 140px;
+    object-fit: cover;
   }
+}
 
-  .header-separator {
-    display: none;
-  }
+/* Skill Category Hover Backgrounds */
+.skills-category:nth-child(1) .skill-item:hover {
+  background-color: var(--programming-scripting-icon-color);
+}
 
-  h1 {
-    font-size: 2.8rem;
-  }
+.skills-category:nth-child(2) .skill-item:hover {
+  background-color: var(--web-mobile-development-icon-color);
+}
 
-  .header-text p {
-    text-align: center;
-    max-width: 90%;
-    margin: 0 auto;
-  }
+.skills-category:nth-child(3) .skill-item:hover {
+  background-color: var(--cloud-devops-icon-color);
+}
 
-  /* Mobile Nav Styles */
-  nav.main-nav {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .nav-container {
-    position: relative; /* Restore relative positioning */
-    max-width: none;
-    margin: 0;
-    padding: 0 15px;
-    /* flex-wrap: wrap; /* Remove wrap */
-  }
+.skills-category:nth-child(4) .skill-item:hover {
+  background-color: var(--databases-icon-color);
+}
 
-  .hamburger-button {
-    display: block;
-    z-index: 110; /* Restore z-index */
-  }
+.skills-category:nth-child(5) .skill-item:hover {
+  background-color: var(--embedded-iot-icon-color);
+}
 
-  .nav-links {
-    position: absolute; /* Restore absolute positioning */
-    top: 100%; /* Position below nav bar */
-    left: 0;
-    right: 0;
-    background-color: var(--nav-background-color);
-    border-bottom: 1px solid var(--border-color); /* Keep border for bottom line */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    z-index: 105;
-    /* width: 100%; /* Not needed with left/right 0 */
-    /* order: 3; /* Not needed when absolute */
-    /* Animation properties */
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out; /* Removed padding/margin transition */
-    /* margin-top: 0; /* Not needed */
-    /* padding: 0; /* Padding handled by open state */
-  }
-
-  .nav-links.open {
-    max-height: 300px; /* Reduced max-height */
-    opacity: 1;
-    visibility: visible;
-    padding-top: 10px; /* Only top padding */
-    padding-bottom: 0; /* Explicitly remove bottom padding */
-    /* margin-top: 10px; */
-    /* border-top: 1px solid var(--border-color); */
-  }
-
-
-  .nav-links ul {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .nav-links li {
-    margin: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 12px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid var(--border-color);
-  }
-  .nav-links li:last-child a {
-    border-bottom: none;
-  }
-
-  /* Adjust project grid for small screens */
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .project-card {
-    min-height: auto;
-  }
-
-  .skills-category-grid {
-    grid-template-columns: 1fr;
-  }
+.skills-category:nth-child(6) .skill-item:hover {
+  background-color: var(--other-icon-color);
 }
