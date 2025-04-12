@@ -1,7 +1,7 @@
 // This is now a Server Component to allow generateStaticParams
 
 // Removed unused useState, useEffect imports as this is a Server Component
-import { projectsData } from "faris-jalal-portfolio/lib/projectsData"; // Import the project data from the shared data file using explicit relative path
+import { projectsData } from "@/lib/projectsData"; // Import the project data from the shared data file using alias
 import Link from "next/link"; // For GitHub link
 import Image from "next/image"; // Use next/image for gallery
 
