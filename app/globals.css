@@ -143,21 +143,28 @@ header.main-header {
 }
 
 /* Section and Footer Base Styles */
-section,
-footer {
+section { /* Apply only to section */
   padding: 20px;
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border-color);
   transition: border-color 0.3s ease;
+  scroll-margin-top: 80px; /* Add offset for sticky nav */
 }
 
-footer {
+footer { /* Keep footer separate */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  transition: border-color 0.3s ease;
+  /* Footer specific styles from below */
   text-align: center;
   border-top: 1px solid var(--border-color);
   border-bottom: none;
   padding-top: 20px;
   margin-top: 40px;
 }
+
+/* Footer styles moved up */
 
 /* Typography */
 h1 {
@@ -465,7 +472,6 @@ nav.main-nav {
 
 .skill-item:hover .skill-name {
   opacity: 1;
-  color: #000000; /* Black */
 }
 
 .skill-item:hover .skill-name-only {
@@ -556,29 +562,109 @@ footer a:hover {
     height: 140px;
     object-fit: cover;
   }
+
+  .header-separator {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .header-text p {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Mobile Nav Styles */
+  nav.main-nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .nav-container {
+    position: relative; /* Restore relative positioning */
+    max-width: none;
+    margin: 0;
+    padding: 0 15px;
+    /* flex-wrap: wrap; /* Remove wrap */
+  }
+
+  .hamburger-button {
+    display: block;
+    z-index: 110;
+  }
+
+  .nav-links {
+    position: absolute; /* Restore absolute positioning */
+    top: 100%; /* Position below nav bar */
+    left: 0;
+    right: 0;
+    background-color: var(--nav-background-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 105;
+    /* width: 100%; /* Not needed with left/right 0 */
+    /* order: 3; /* Not needed when absolute */
+    /* Animation properties */
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out; /* Removed padding/margin transition */
+    /* margin-top: 0; /* Not needed */
+    /* padding: 0; /* Padding handled by open state */
+  }
+
+  .nav-links.open {
+    max-height: 300px; /* Reduced max-height */
+    opacity: 1;
+    visibility: visible;
+    padding-top: 10px; /* Only top padding */
+    padding-bottom: 0; /* Explicitly remove bottom padding */
+    /* margin-top: 10px; */
+    /* border-top: 1px solid var(--border-color); */
+  }
+
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 12px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .nav-links li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Adjust project grid for small screens */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .project-card {
+    min-height: auto;
+  }
+
+  .skills-category-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Skill Category Hover Backgrounds */
 .skills-category:nth-child(1) .skill-item:hover {
   background-color: var(--programming-scripting-icon-color);
-}
-
-.skills-category:nth-child(2) .skill-item:hover {
-  background-color: var(--web-mobile-development-icon-color);
-}
-
-.skills-category:nth-child(3) .skill-item:hover {
-  background-color: var(--cloud-devops-icon-color);
-}
-
-.skills-category:nth-child(4) .skill-item:hover {
-  background-color: var(--databases-icon-color);
-}
-
-.skills-category:nth-child(5) .skill-item:hover {
-  background-color: var(--embedded-iot-icon-color);
-}
-
-.skills-category:nth-child(6) .skill-item:hover {
-  background-color: var(--other-icon-color);
 }
