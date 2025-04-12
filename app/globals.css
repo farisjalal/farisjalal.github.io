@@ -686,5 +686,5 @@ footer a:hover {
 }
 
 .skills-category:nth-child(6) .skill-item:hover {
-  background-color: var(--others-hover-color);
+  background-color: var(--other-hover-color);
 }
