@@ -90,139 +90,226 @@ export default function Home() {
           {/* Changed class for grid layout */}
           {/* Programming/Scripting */}
           <div className='skills-category'>
-            <h3>Programming/Scripting</h3>
-            <div className='skills-icons'>
+            <h3 style={{ color: "var(--programming-scripting-color)" }}>
+              Programming/Scripting
+            </h3>
+            <div
+              className='skills-icons'
+              style={{ color: "var(--programming-scripting-icon-color)" }}
+            >
               {/* Python */}
               <div className='skill-item' title='Python'>
-                <FaPython className='skill-icon' />
+                <FaPython
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>Python</span>
               </div>
               {/* C */}
               <div className='skill-item' title='C'>
-                <SiC className='skill-icon' />
+                <SiC
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>C</span>
               </div>
               {/* C++ */}
               <div className='skill-item' title='C++'>
-                <SiCplusplus className='skill-icon' />
+                <SiCplusplus
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>C++</span>
               </div>
               {/* Java */}
               <div className='skill-item' title='Java'>
-                <FaJava className='skill-icon' />
+                <FaJava
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>Java</span>
               </div>
               {/* Dart */}
               <div className='skill-item' title='Dart'>
-                <SiDart className='skill-icon' />
+                <SiDart
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>Dart</span>
               </div>
               {/* Bash */}
               <div className='skill-item' title='Bash'>
-                <SiGnubash className='skill-icon' />
+                <SiGnubash
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>Bash</span>
               </div>
               {/* Perl */}
               <div className='skill-item' title='Perl'>
-                <SiPerl className='skill-icon' />
+                <SiPerl
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>Perl</span>
               </div>
               {/* JavaScript */}
               <div className='skill-item' title='JavaScript'>
-                <FaJsSquare className='skill-icon' />
+                <FaJsSquare
+                  className='skill-icon'
+                  style={{ color: "var(--programming-scripting-icon-color)" }}
+                />
                 <span className='skill-name'>JavaScript</span>
               </div>
             </div>
           </div>
           {/* Web/Mobile Development */}
           <div className='skills-category'>
-            <h3>Web/Mobile Development</h3>
+            <h3 style={{ color: "var(--web-mobile-development-color)" }}>
+              Web/Mobile Development
+            </h3>
             <div className='skills-icons'>
               {/* React */}
               <div className='skill-item' title='React'>
-                <FaReact className='skill-icon' />
+                <FaReact
+                  className='skill-icon'
+                  style={{ color: "var(--web-mobile-development-icon-color)" }}
+                />
                 <span className='skill-name'>React</span>
               </div>
               {/* Node.js */}
               <div className='skill-item' title='Node.js'>
-                <FaNodeJs className='skill-icon' />
+                <FaNodeJs
+                  className='skill-icon'
+                  style={{ color: "var(--web-mobile-development-icon-color)" }}
+                />
                 <span className='skill-name'>Node.js</span>
               </div>
               {/* Next.js */}
               <div className='skill-item' title='Next.js'>
-                <SiNextdotjs className='skill-icon' />
+                <SiNextdotjs
+                  className='skill-icon'
+                  style={{ color: "var(--web-mobile-development-icon-color)" }}
+                />
                 <span className='skill-name'>Next.js</span>
               </div>
               {/* Flutter */}
               <div className='skill-item' title='Flutter'>
-                <SiFlutter className='skill-icon' />
+                <SiFlutter
+                  className='skill-icon'
+                  style={{ color: "var(--web-mobile-development-icon-color)" }}
+                />
                 <span className='skill-name'>Flutter</span>
               </div>
               {/* Firebase */}
               <div className='skill-item' title='Firebase'>
-                <SiFirebase className='skill-icon' />
+                <SiFirebase
+                  className='skill-icon'
+                  style={{ color: "var(--web-mobile-development-icon-color)" }}
+                />
                 <span className='skill-name'>Firebase</span>
               </div>
             </div>
           </div>
           {/* Cloud & DevOps */}
           <div className='skills-category'>
-            <h3>Cloud & DevOps</h3>
-            <div className='skills-icons'>
+            <h3 style={{ color: "var(--cloud-devops-color)" }}>
+              Cloud & DevOps
+            </h3>
+            <div
+              className='skills-icons'
+              style={{ color: "var(--cloud-devops-icon-color)" }}
+            >
               {/* Azure Logic Apps */}
               <div className='skill-item' title='Azure Logic Apps'>
-                <VscAzure className='skill-icon' /> {/* Using generic Azure */}
+                <VscAzure
+                  className='skill-icon'
+                  style={{ color: "var(--cloud-devops-icon-color)" }}
+                />{" "}
+                {/* Using generic Azure */}
                 <span className='skill-name'>Azure Logic Apps</span>
               </div>
               {/* Azure DevOps */}
               <div className='skill-item' title='Azure DevOps'>
-                <VscAzureDevops className='skill-icon' />
+                <VscAzureDevops
+                  className='skill-icon'
+                  style={{ color: "var(--cloud-devops-icon-color)" }}
+                />
                 <span className='skill-name'>Azure DevOps</span>
               </div>
               {/* GitHub CI/CD */}
               <div className='skill-item' title='GitHub CI/CD'>
-                <FaGithub className='skill-icon' />
+                <FaGithub
+                  className='skill-icon'
+                  style={{ color: "var(--cloud-devops-icon-color)" }}
+                />
                 <span className='skill-name'>GitHub CI/CD</span>
               </div>
               {/* AWS */}
               <div className='skill-item' title='AWS'>
-                <FaAws className='skill-icon' />
+                <FaAws
+                  className='skill-icon'
+                  style={{ color: "var(--cloud-devops-icon-color)" }}
+                />
                 <span className='skill-name'>AWS</span>
               </div>
               {/* Git */}
               <div className='skill-item' title='Git'>
-                <FaGitAlt className='skill-icon' />
+                <FaGitAlt
+                  className='skill-icon'
+                  style={{ color: "var(--cloud-devops-icon-color)" }}
+                />
                 <span className='skill-name'>Git</span>
               </div>
             </div>
           </div>
           {/* Databases */}
           <div className='skills-category'>
-            <h3>Databases</h3>
-            <div className='skills-icons'>
+            <h3 style={{ color: "var(--databases-color)" }}>Databases</h3>
+            <div
+              className='skills-icons'
+              style={{ color: "var(--databases-icon-color)" }}
+            >
               {/* PostgreSQL */}
               <div className='skill-item' title='PostgreSQL'>
-                <SiPostgresql className='skill-icon' />
+                <SiPostgresql
+                  className='skill-icon'
+                  style={{ color: "var(--databases-icon-color)" }}
+                />
                 <span className='skill-name'>PostgreSQL</span>
               </div>
               {/* SQLite */}
               <div className='skill-item' title='SQLite'>
-                <SiSqlite className='skill-icon' />
+                <SiSqlite
+                  className='skill-icon'
+                  style={{ color: "var(--databases-icon-color)" }}
+                />
                 <span className='skill-name'>SQLite</span>
               </div>
               {/* SQL */}
               <div className='skill-item' title='SQL'>
-                <FaDatabase className='skill-icon' /> {/* Using generic */}
+                <FaDatabase
+                  className='skill-icon'
+                  style={{ color: "var(--databases-icon-color)" }}
+                />{" "}
+                {/* Using generic */}
                 <span className='skill-name'>SQL</span>
               </div>
               {/* NoSQL */}
               <div className='skill-item' title='NoSQL'>
-                <FaDatabase className='skill-icon' /> {/* Using generic */}
+                <FaDatabase
+                  className='skill-icon'
+                  style={{ color: "var(--databases-icon-color)" }}
+                />{" "}
+                {/* Using generic */}
                 <span className='skill-name'>NoSQL</span>
               </div>
               {/* Firestore */}
               <div className='skill-item' title='Firestore'>
-                <SiFirebase className='skill-icon' />{" "}
+                <SiFirebase
+                  className='skill-icon'
+                  style={{ color: "var(--databases-icon-color)" }}
+                />{" "}
                 {/* Using Firebase icon */}
                 <span className='skill-name'>Firestore</span>
               </div>
@@ -230,42 +317,68 @@ export default function Home() {
           </div>
           {/* Embedded Systems / IoT */}
           <div className='skills-category'>
-            <h3>Embedded Systems / IoT</h3>
-            <div className='skills-icons'>
+            <h3 style={{ color: "var(--embedded-iot-color)" }}>
+              Embedded Systems / IoT
+            </h3>
+            <div
+              className='skills-icons'
+              style={{ color: "var(--embedded-iot-icon-color)" }}
+            >
               {/* Raspberry Pi */}
               <div className='skill-item' title='Raspberry Pi'>
-                <FaRaspberryPi className='skill-icon' />
+                <FaRaspberryPi
+                  className='skill-icon'
+                  style={{ color: "var(--embedded-iot-icon-color)" }}
+                />
                 <span className='skill-name'>Raspberry Pi</span>
               </div>
               {/* Arduino */}
               <div className='skill-item' title='Arduino'>
-                <SiArduino className='skill-icon' />
+                <SiArduino
+                  className='skill-icon'
+                  style={{ color: "var(--embedded-iot-icon-color)" }}
+                />
                 <span className='skill-name'>Arduino</span>
               </div>
             </div>
           </div>
           {/* Other */}
           <div className='skills-category'>
-            <h3>Other</h3>
-            <div className='skills-icons'>
+            <h3 style={{ color: "var(--other-color)" }}>Other</h3>
+            <div
+              className='skills-icons'
+              style={{ color: "var(--other-icon-color)" }}
+            >
               {/* Networking */}
               <div className='skill-item' title='Networking'>
-                <FaNetworkWired className='skill-icon' />
+                <FaNetworkWired
+                  className='skill-icon'
+                  style={{ color: "var(--other-icon-color)" }}
+                />
                 <span className='skill-name'>Networking</span>
               </div>
               {/* Cyber Security */}
               <div className='skill-item' title='Cyber Security'>
-                <FaShieldAlt className='skill-icon' />
+                <FaShieldAlt
+                  className='skill-icon'
+                  style={{ color: "var(--other-icon-color)" }}
+                />
                 <span className='skill-name'>Cyber Security</span>
               </div>
               {/* Linux */}
               <div className='skill-item' title='Linux'>
-                <FaLinux className='skill-icon' />
+                <FaLinux
+                  className='skill-icon'
+                  style={{ color: "var(--other-icon-color)" }}
+                />
                 <span className='skill-name'>Linux</span>
               </div>
               {/* Swagger */}
               <div className='skill-item' title='Swagger'>
-                <SiSwagger className='skill-icon' />
+                <SiSwagger
+                  className='skill-icon'
+                  style={{ color: "var(--other-icon-color)" }}
+                />
                 <span className='skill-name'>Swagger</span>
               </div>
             </div>

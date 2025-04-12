@@ -23,6 +23,21 @@
   --skill-name-color: #6B7280;        /* gray-500 */
   --skill-name-only-color: #9CA3AF;   /* gray-400 */
   --skill-name-only-hover-color: #6B7280; /* gray-500 */
+
+  /* Skill Category Colors - Light Mode */
+  --programming-scripting-color: #2563EB; /* blue-600 */
+  --web-mobile-development-color: #16A34A; /* green-600 */
+  --cloud-devops-color: #C026D3; /* purple-600 */
+  --databases-color: #D97706; /* amber-600 */
+  --embedded-iot-color: #DC2626; /* red-600 */
+  --other-color: #0E7490; /* cyan-600 */
+
+  --programming-scripting-icon-color: #60A5FA; /* blue-400 */
+  --web-mobile-development-icon-color: #6EEB8B; /* green-400 */
+  --cloud-devops-icon-color: #E879F9; /* purple-400 */
+  --databases-icon-color: #FCD34D; /* amber-300 */
+  --embedded-iot-icon-color: #F87171; /* red-400 */
+  --other-icon-color: #22D3EE; /* cyan-400 */
 }
 
 /* Refined Dark Mode Palette */
@@ -47,6 +62,23 @@ html.dark {
   --skill-name-color: #9CA3AF;        /* gray-400 */
   --skill-name-only-color: #6B7280;   /* gray-500 */
   --skill-name-only-hover-color: #9CA3AF; /* gray-400 */
+
+  /* Skill Category Colors - Dark Mode */
+  html.dark & {
+    --programming-scripting-color: #90CAF9; /* blue-300 */
+    --web-mobile-development-color: #6EEB8B; /* green-400 */
+    --cloud-devops-color: #E879F9; /* purple-400 */
+    --databases-color: #FCD34D; /* amber-300 */
+    --embedded-iot-color: #F87171; /* red-400 */
+    --other-color: #22D3EE; /* cyan-400 */
+
+    --programming-scripting-icon-color: #2563EB; /* blue-600 */
+    --web-mobile-development-icon-color: #16A34A; /* green-600 */
+    --cloud-devops-icon-color: #C026D3; /* purple-600 */
+    --databases-icon-color: #D97706; /* amber-600 */
+    --embedded-iot-icon-color: #DC2626; /* red-600 */
+    --other-icon-color: #0E7490; /* cyan-600 */
+  }
 }
 
 
@@ -420,6 +452,11 @@ nav.main-nav {
 .skill-item:hover .skill-name-only {
    opacity: 1;
    color: var(--skill-name-only-hover-color);
+}
+
+
+.skill-icon::before {
+  color: inherit; /* Inherit color from parent */
 }
 
 /* Interests, Contact Styles */
