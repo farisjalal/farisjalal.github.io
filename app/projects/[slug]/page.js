@@ -10,8 +10,8 @@ const getProjectBySlug = (slug) => {
   return projectsData.find((project) => project.slug === slug);
 };
 
-export default function ProjectPage({ params }) {
-  const { slug } = params;
+export default async function ProjectPage({ params }) {
+  const { slug } = await params;
   const project = getProjectBySlug(slug);
 
   // Handle case where project is not found
