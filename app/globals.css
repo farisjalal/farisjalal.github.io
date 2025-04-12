@@ -666,5 +666,25 @@ footer a:hover {
 
 /* Skill Category Hover Backgrounds */
 .skills-category:nth-child(1) .skill-item:hover {
-  background-color: var(--programming-scripting-icon-color);
+  background-color: var(--programming-scripting-hover-color);
+}
+
+.skills-category:nth-child(2) .skill-item:hover {
+  background-color: var(--web-mobile-development-hover-color);
+}
+
+.skills-category:nth-child(3) .skill-item:hover {
+  background-color: var(--cloud-devops-hover-color);
+}
+
+.skills-category:nth-child(4) .skill-item:hover {
+  background-color: var(--database-hover-color);
+}
+
+.skills-category:nth-child(5) .skill-item:hover {
+  background-color: var(--embedded-iot-hover-color);
+}
+
+.skills-category:nth-child(6) .skill-item:hover {
+  background-color: var(--others-hover-color);
 }
