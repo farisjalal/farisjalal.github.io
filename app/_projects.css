@@ -12,7 +12,7 @@
   transition: transform 0.2s ease-out, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.2s ease-out;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
   background-color: var(--card-background-color);
   border-radius: 10px;
@@ -41,10 +41,12 @@
 
 .project-card p {
   font-size: 0.9rem;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   margin-bottom: 10px;
   text-align: left;
   color: var(--text-muted-color);
+  height: 75px;
+  overflow: hidden;
 }
 
 .project-card a {
@@ -66,6 +68,8 @@
   justify-content: center;
   gap: 5px;
   margin-bottom: 10px;
+  height: 30px;
+  overflow: hidden;
 }
 
 .tag {

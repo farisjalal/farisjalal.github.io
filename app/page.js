@@ -388,25 +388,28 @@ export default function Home() {
           {projects.map((project, index) => (
             // Renamed class from carousel-item to project-card
             <div className='project-card' key={index}>
-              <img
-                src={project.image}
-                alt={project.title}
-                // Removed inline style, width/height handled by CSS
-              />
-              <h3>{project.title}</h3>
-              <div className='tags'>
-                {projects.tags &&
-                  projects.tags.map((tag, tagIndex) => (
-                    <span className='tag' key={tagIndex}>
-                      {tag}
-                    </span>
-                  ))}
-              </div>
-              <p>{project.description}</p>
-              <div className='project-footer'>
-                <span>{project.year}</span>
-                <a href={project.link}>View Project</a>{" "}
-                {/* Link now points to /projects/[slug] */}
+              <div className='project-details'>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  // Removed inline style, width/height handled by CSS
+                />
+                <h3>{project.title}</h3>
+                {project.tags && (
+                  <div className='tags project-tags'>
+                    {project.tags.map((tag, tagIndex) => (
+                      <span className='tag' key={tagIndex}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <p>{project.description}</p>
+                <div className='project-footer'>
+                  <span>{project.year}</span>
+                  <a href={project.link}>View Project</a>{" "}
+                  {/* Link now points to /projects/[slug] */}
+                </div>
               </div>
             </div>
           ))}
