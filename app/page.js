@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 // Removed useState, useEffect, useCallback as they are now in Navbar
 import {
   FaPython,
@@ -387,7 +388,11 @@ export default function Home() {
         <div className='projects-grid'>
           {projects.map((project, index) => (
             // Renamed class from carousel-item to project-card
-            <div className='project-card' key={index}>
+            <Link
+              href={`/projects/${project.slug}`}
+              key={index}
+              className='project-card'
+            >
               <div className='project-details'>
                 <img
                   src={project.image}
@@ -407,11 +412,9 @@ export default function Home() {
                 <p>{project.description}</p>
                 <div className='project-footer'>
                   <span>{project.year}</span>
-                  <a href={project.link}>View Project</a>{" "}
-                  {/* Link now points to /projects/[slug] */}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>

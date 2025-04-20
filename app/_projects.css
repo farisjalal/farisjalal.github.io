@@ -17,7 +17,7 @@
   background-color: var(--card-background-color);
   border-radius: 10px;
   min-height: 450px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: none;
 }
 
 .project-card:hover {
@@ -70,6 +70,14 @@
   margin-bottom: 10px;
   height: 30px;
   overflow: hidden;
+}
+
+.project-details {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
 }
 
 .tag {
