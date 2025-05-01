@@ -451,33 +451,13 @@ export default function Home() {
           </a>
         </p>
         <p>
-          Twitter:{" "}
-          <a
-            href='https://twitter.com/faris__jalal'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            @faris__jalal
-          </a>
-        </p>
-        <p>
-          Instagram:{" "}
-          <a
-            href='https://instagram.com/faris__jalal'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            @faris__jalal
-          </a>
-        </p>
-        <p>
           Discord:{" "}
           <a
             href='https://www.discordapp.com/users/208856802459123712/'
             target='_blank'
             rel='noopener noreferrer'
           >
-            Purplemaze#8272
+            Purplemaze
           </a>
         </p>
         <p>
