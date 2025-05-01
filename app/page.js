@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 // Removed useState, useEffect, useCallback as they are now in Navbar
 import {
   FaPython,
@@ -387,28 +388,34 @@ export default function Home() {
         <div className='projects-grid'>
           {projects.map((project, index) => (
             // Renamed class from carousel-item to project-card
-            <div className='project-card' key={index}>
-              <img
-                src={project.image}
-                alt={project.title}
-                // Removed inline style, width/height handled by CSS
-              />
-              <h3>{project.title}</h3>
-              <div className='tags'>
-                {projects.tags &&
-                  projects.tags.map((tag, tagIndex) => (
-                    <span className='tag' key={tagIndex}>
-                      {tag}
-                    </span>
-                  ))}
+            <Link
+              href={`/projects/${project.slug}`}
+              key={index}
+              className='project-card'
+            >
+              <div className='project-details'>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  // Removed inline style, width/height handled by CSS
+                />
+                <h3>{project.title}</h3>
+                {project.tags && (
+                  <div className='tags project-tags'>
+                    {project.tags.map((tag, tagIndex) => (
+                      <span className='tag' key={tagIndex}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                <p>{project.description}</p>
+                <div className='project-footer'>
+                  <span>{project.year}</span>
+                  <span className='project-button'>View Project</span>
+                </div>
               </div>
-              <p>{project.description}</p>
-              <div className='project-footer'>
-                <span>{project.year}</span>
-                <a href={project.link}>View Project</a>{" "}
-                {/* Link now points to /projects/[slug] */}
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -444,33 +451,13 @@ export default function Home() {
           </a>
         </p>
         <p>
-          Twitter:{" "}
-          <a
-            href='https://twitter.com/faris__jalal'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            @faris__jalal
-          </a>
-        </p>
-        <p>
-          Instagram:{" "}
-          <a
-            href='https://instagram.com/faris__jalal'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            @faris__jalal
-          </a>
-        </p>
-        <p>
           Discord:{" "}
           <a
             href='https://www.discordapp.com/users/208856802459123712/'
             target='_blank'
             rel='noopener noreferrer'
           >
-            Purplemaze#8272
+            Purplemaze
           </a>
         </p>
         <p>

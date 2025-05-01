@@ -23,62 +23,67 @@ export default async function ProjectPage({ params }) {
   return (
     <div className='project-detail-container'>
       {/* Navbar is now handled by the root layout (layout.js) */}
-      <main className='project-content'>
-        <div className='project-grid'>
-          <div className='project-details'>
-            <h1>{project.title}</h1>
-            <div className='project-meta'>
-              <span>{project.year}</span>
-              {project.tags && (
-                <div className='tags project-tags'>
-                  {project.tags.map((tag, tagIndex) => (
-                    <span className='tag' key={tagIndex}>
-                      {tag}
-                    </span>
+      <section>
+        <main className='project-content'>
+          <div className='project-grid'>
+            <div className='project-details'>
+              <h1>{project.title}</h1>
+              <div className='project-meta'>
+                <span>{project.year}</span>
+                {project.tags && (
+                  <div className='tags project-tags'>
+                    {project.tags.map((tag, tagIndex) => (
+                      <span className='tag' key={tagIndex}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Long Description */}
+              <div className='project-description-long'>
+                {project.longDescription &&
+                  project.longDescription.map((paragraph, index) => (
+                    <p key={index}>{paragraph}</p>
                   ))}
+              </div>
+
+              {/* GitHub Link */}
+              {project.githubLink && project.githubLink !== "#" && (
+                <div className='project-github-link'>
+                  <a
+                    href={project.githubLink}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                  >
+                    View on GitHub
+                  </a>
                 </div>
               )}
-            </div>
 
-            {/* Long Description */}
-            <div className='project-description-long'>
-              {project.longDescription &&
-                project.longDescription.map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-            </div>
-
-            {/* GitHub Link */}
-            {project.githubLink && project.githubLink !== "#" && (
-              <div className='project-github-link'>
-                <a
-                  href={project.githubLink}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  View on GitHub
-                </a>
+              {/* Back Link */}
+              <div className='back-link'>
+                <Link href='/#projects'>← Back to Projects</Link>
               </div>
-            )}
-
-            {/* Back Link */}
-            <div className='back-link'>
-              <Link href='/#projects'>← Back to Projects</Link>
             </div>
-          </div>
 
-          {project.galleryImages && project.galleryImages.length > 0 && (
-            <ProjectCarousel
-              images={project.galleryImages}
-              title={project.title}
-            />
-          )}
-        </div>
-      </main>
+            {project.galleryImages && project.galleryImages.length > 0 && (
+              <ProjectCarousel
+                images={project.galleryImages}
+                title={project.title}
+              />
+            )}
+          </div>
+        </main>
+      </section>
 
       {/* Basic Footer - Consider shared layout */}
       <footer>
-        <p>© {new Date().getFullYear()} Faris Jalal</p>
+        <p>© 2025 Faris Jalal</p>
+        <p>
+          <a href='/#contact'>Contact</a>
+        </p>
       </footer>
     </div>
   );
