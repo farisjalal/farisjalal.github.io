@@ -101,3 +101,16 @@
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
+
+.project-button {
+  color: var(--button-text-color);
+  background-color: var(--button-background-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.project-button:hover {
+  background-color: var(--button-hover-background-color);
+}

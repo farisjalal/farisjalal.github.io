@@ -412,6 +412,7 @@ export default function Home() {
                 <p>{project.description}</p>
                 <div className='project-footer'>
                   <span>{project.year}</span>
+                  <span className='project-button'>View Project</span>
                 </div>
               </div>
             </Link>
